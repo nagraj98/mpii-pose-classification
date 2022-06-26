@@ -4,7 +4,7 @@
 
 Although many experiments use neural networks to achieve the classification, some stakeholders demand better explainability.
 
-Here we have a small subset of mpii's annotated data, filtered to include positions related to sports and exercise. The challenge here is to use just the annotations (and not the images) for pose classification.
+Here we have a small subset of mpii's annotated data, filtered to include only the positions related to sports and exercise. The challenge here is to use just the annotations (and not the images) for pose classification.
 
 - Machine Learning Task: **Classification**
 - Target Variable: **Activity name**
@@ -12,14 +12,17 @@ Here we have a small subset of mpii's annotated data, filtered to include positi
 
 ## Data Description :
 
+poseTrain_Dataset - training dataset that includes the label column (act_name)
+poseEval_Dataset - Evaluation dataset that excludes the label column.
+
 |     | Columns  | Description   |
 |----:|:--------|:--------|
-|  0 | img_id | image id  |
-|  0 | rx1, ry1, rx2, ry2 | coordinates of the head rectangle  |
-|  1 | scale | person scale w.r.t. 200 px height  |
-|  6  | x_i, y_i  | keypoint coordinates of the ith joint |
-|  6  | vis_i  | visibility of the ith joint   | 
-| 5 | act_name | activity name |
-| 4 | cat_name | category name |
+|  1 | img_id   | image id  |
+|  2 | rx1, ry1, rx2, ry2 | coordinates of the head rectangle  |
+|  3 | scale    | person scale w.r.t. 200 px height  |
+|  4 | x_i, y_i | keypoint coordinates of the ith joint |
+|  5 | vis_i    | visibility of the ith joint   | 
+|  6 | cat_name | category name |
+|  7 | act_name | activity name |
 
-Explain the task:
+
